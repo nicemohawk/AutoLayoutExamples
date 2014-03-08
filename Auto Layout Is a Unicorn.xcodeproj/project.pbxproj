@@ -13,8 +13,6 @@
 		B55D6A1318C65A5200DA2C4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B55D6A1118C65A5200DA2C4B /* InfoPlist.strings */; };
 		B55D6A1518C65A5200DA2C4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B55D6A1418C65A5200DA2C4B /* main.m */; };
 		B55D6A1918C65A5200DA2C4B /* NMLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B55D6A1818C65A5200DA2C4B /* NMLAppDelegate.m */; };
-		B55D6A1C18C65A5200DA2C4B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55D6A1A18C65A5200DA2C4B /* Main_iPhone.storyboard */; };
-		B55D6A1F18C65A5200DA2C4B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55D6A1D18C65A5200DA2C4B /* Main_iPad.storyboard */; };
 		B55D6A2218C65A5200DA2C4B /* NMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B55D6A2118C65A5200DA2C4B /* NMLViewController.m */; };
 		B55D6A2418C65A5200DA2C4B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55D6A2318C65A5200DA2C4B /* Images.xcassets */; };
 		B55D6A2B18C65A5200DA2C4B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55D6A2A18C65A5200DA2C4B /* XCTest.framework */; };
@@ -22,6 +20,8 @@
 		B55D6A2D18C65A5200DA2C4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55D6A0C18C65A5200DA2C4B /* UIKit.framework */; };
 		B55D6A3518C65A5200DA2C4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B55D6A3318C65A5200DA2C4B /* InfoPlist.strings */; };
 		B55D6A3718C65A5200DA2C4B /* Auto_Layout_Is_a_UnicornTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B55D6A3618C65A5200DA2C4B /* Auto_Layout_Is_a_UnicornTests.m */; };
+		B55D6A8618C842F100DA2C4B /* NSLayoutConstraint+Debugging.m in Sources */ = {isa = PBXBuildFile; fileRef = B55D6A8518C842F100DA2C4B /* NSLayoutConstraint+Debugging.m */; };
+		B57A36BD18CB02FA00B796EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57A36BB18CB02FA00B796EF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +45,6 @@
 		B55D6A1618C65A5200DA2C4B /* Auto Layout Is a Unicorn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Auto Layout Is a Unicorn-Prefix.pch"; sourceTree = "<group>"; };
 		B55D6A1718C65A5200DA2C4B /* NMLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMLAppDelegate.h; sourceTree = "<group>"; };
 		B55D6A1818C65A5200DA2C4B /* NMLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMLAppDelegate.m; sourceTree = "<group>"; };
-		B55D6A1B18C65A5200DA2C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		B55D6A1E18C65A5200DA2C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		B55D6A2018C65A5200DA2C4B /* NMLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMLViewController.h; sourceTree = "<group>"; };
 		B55D6A2118C65A5200DA2C4B /* NMLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMLViewController.m; sourceTree = "<group>"; };
 		B55D6A2318C65A5200DA2C4B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -55,6 +53,9 @@
 		B55D6A3218C65A5200DA2C4B /* Auto Layout Is a UnicornTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Auto Layout Is a UnicornTests-Info.plist"; sourceTree = "<group>"; };
 		B55D6A3418C65A5200DA2C4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B55D6A3618C65A5200DA2C4B /* Auto_Layout_Is_a_UnicornTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Auto_Layout_Is_a_UnicornTests.m; sourceTree = "<group>"; };
+		B55D6A8418C842F100DA2C4B /* NSLayoutConstraint+Debugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+Debugging.h"; sourceTree = "<group>"; };
+		B55D6A8518C842F100DA2C4B /* NSLayoutConstraint+Debugging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+Debugging.m"; sourceTree = "<group>"; };
+		B57A36BC18CB02FA00B796EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +117,11 @@
 			children = (
 				B55D6A1718C65A5200DA2C4B /* NMLAppDelegate.h */,
 				B55D6A1818C65A5200DA2C4B /* NMLAppDelegate.m */,
-				B55D6A1A18C65A5200DA2C4B /* Main_iPhone.storyboard */,
-				B55D6A1D18C65A5200DA2C4B /* Main_iPad.storyboard */,
 				B55D6A2018C65A5200DA2C4B /* NMLViewController.h */,
 				B55D6A2118C65A5200DA2C4B /* NMLViewController.m */,
+				B57A36BB18CB02FA00B796EF /* Main.storyboard */,
 				B55D6A2318C65A5200DA2C4B /* Images.xcassets */,
+				B55D6A8718C842F800DA2C4B /* Categories */,
 				B55D6A0F18C65A5200DA2C4B /* Supporting Files */,
 			);
 			path = "Auto Layout Is a Unicorn";
@@ -153,6 +154,15 @@
 				B55D6A3318C65A5200DA2C4B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B55D6A8718C842F800DA2C4B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B55D6A8418C842F100DA2C4B /* NSLayoutConstraint+Debugging.h */,
+				B55D6A8518C842F100DA2C4B /* NSLayoutConstraint+Debugging.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +245,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B55D6A1F18C65A5200DA2C4B /* Main_iPad.storyboard in Resources */,
+				B57A36BD18CB02FA00B796EF /* Main.storyboard in Resources */,
 				B55D6A2418C65A5200DA2C4B /* Images.xcassets in Resources */,
-				B55D6A1C18C65A5200DA2C4B /* Main_iPhone.storyboard in Resources */,
 				B55D6A1318C65A5200DA2C4B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55D6A8618C842F100DA2C4B /* NSLayoutConstraint+Debugging.m in Sources */,
 				B55D6A2218C65A5200DA2C4B /* NMLViewController.m in Sources */,
 				B55D6A1918C65A5200DA2C4B /* NMLAppDelegate.m in Sources */,
 				B55D6A1518C65A5200DA2C4B /* main.m in Sources */,
@@ -290,28 +300,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		B55D6A1A18C65A5200DA2C4B /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B55D6A1B18C65A5200DA2C4B /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		B55D6A1D18C65A5200DA2C4B /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B55D6A1E18C65A5200DA2C4B /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		B55D6A3318C65A5200DA2C4B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B55D6A3418C65A5200DA2C4B /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B57A36BB18CB02FA00B796EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B57A36BC18CB02FA00B796EF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
