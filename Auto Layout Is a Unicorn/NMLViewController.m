@@ -11,9 +11,11 @@
 @interface NMLViewController ()
 
 @property IBOutlet NSLayoutConstraint *animatedConstraint;
-@property BOOL drawerIsOpen;
-
+@property IBOutlet UIView *drawerView;
 @property IBOutlet UIView *viewToTransform;
+@property IBOutlet UIView *containerView;
+
+@property BOOL drawerIsOpen;
 
 @end
 
@@ -23,14 +25,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	
-	self.viewToTransform.superview.translatesAutoresizingMaskIntoConstraints = YES;
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	UIView *view = self.containerView;
+
+	NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[view]-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(view)];
+
+	[self.view addConstraints:constraints];
 }
 
 #pragma mark - Actions
@@ -46,19 +46,34 @@
 	}
 
 	[UIView animateWithDuration:0.5 animations:^{
-		[self.view layoutIfNeeded];
+		[[self.animatedConstraint.firstItem superview] layoutIfNeeded];
 	}];
 }
 
+- (IBAction)CATransformAction:(id)sender {
+	CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"transform"];
+	animation.duration = 0.5;
+	animation.autoreverses = YES;
+	animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(0, 220, 0)];
+	[self.drawerView.layer addAnimation:animation forKey:nil];
+}
+
 - (IBAction)transformAction:(id)sender {
-	[UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
-		CGAffineTransform transform = CGAffineTransformConcat(self.viewToTransform.transform, CGAffineTransformMakeScale(2.0f, 2.0f));
-		
-		transform = CGAffineTransformConcat(transform, CGAffineTransformMakeRotation(180/M_PI));
-		self.viewToTransform.transform = transform;
+	static BOOL toggle = NO;
+
+	CGFloat scaleFactor = 2.0f;
+
+	if( toggle ) {
+		scaleFactor = 0.5f;
+	}
+
+	toggle = !toggle;
+
+	CGAffineTransform animationTransform = CGAffineTransformConcat(CGAffineTransformMakeRotation(180/M_PI), CGAffineTransformMakeScale(scaleFactor, scaleFactor));
+
+	[UIView animateWithDuration:.5 delay:0 options:0 animations:^{
+		self.viewToTransform.transform = CGAffineTransformConcat(self.viewToTransform.transform, animationTransform);
 	} completion:nil];
-	
-	[sender setEnabled:NO];
 }
 
 @end
